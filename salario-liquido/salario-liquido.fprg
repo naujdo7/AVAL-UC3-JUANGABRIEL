@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="salario-liquido"/>
+        <attribute name="authors" value="juan.gmaraujo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-03 02:28:20 "/>
+        <attribute name="created" value="anVhbi5nbWFyYXVqbztTQU4wNjc0Mzg1VzExLTE7MjAyNS0wOS0wMzsiMDE6NDc6NTEgIjszMzk4"/>
+        <attribute name="edited" value="anVhbi5nbWFyYXVqbztTQU4wNjc0Mzg1VzExLTE7MjAyNS0wOS0wMzsiMDI6Mjg6MjAgIjsxOzM1MDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorHora, horasTrabalho, imposto, salarioTotal" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual &#233; o valor da hora trabalhada?&quot;" newline="True"/>
+            <input variable="valorHora"/>
+            <output expression="&quot;Qual &#233; o n&#250;mero de horas totais trabalhadas no m&#234;s?&quot;" newline="True"/>
+            <input variable="horasTrabalho"/>
+            <assign variable="salarioTotal" expression="horasTrabalho * valorHora"/>
+            <if expression="salarioTotal &gt;= 2000">
+                <then>
+                    <assign variable="imposto" expression="salarioTotal * 0.05"/>
+                    <assign variable="salarioTotal" expression="salarioTotal - imposto"/>
+                    <output expression="&quot;Seu sal&#225;rio &#233; acima de R$2000,00. Voc&#234; ter&#225; que pagar 5% de imposto sobre o valor recebido.&quot;" newline="True"/>
+                    <output expression="&quot;Ap&#243;s o desconto de 5% seu sal&#225;rio l&#237;quido &#233; de: &quot; &amp; salarioTotal &amp; &quot; Reais&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; recebeu menos que R$2000,00 por isso est&#225; isento de impostos. Seu sal&#225;rio liqu&#237;do &#233; de: &quot; &amp; salarioTotal &amp; &quot; Reais&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

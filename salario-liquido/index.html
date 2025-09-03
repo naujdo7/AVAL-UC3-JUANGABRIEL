@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário Líquido</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Calcule de acordo com seu salário se você precisa pagar impostos ou não</h1>
+    <form action="./pages/salario.php" method="get">
+        <div>
+            <label for="valorHora">Qual é o valor da hora trabalhada?</label>
+            <input type="number"  name="valorHora" id="valorHora" required>
+        </div>
+            <div>
+            <label for="horasTrabalho">Qual é o número de horas totais trabalhadas no mês?</label>
+            <input type="number"  name="horasTrabalho" id="horasTrabalho" required>
+        </div>
+        <input type="submit" value="Verificar salário">
+    </form>
+</body>
+</html>

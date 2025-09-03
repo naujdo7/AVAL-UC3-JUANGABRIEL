@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="maismenos"/>
+        <attribute name="authors" value="juan.gmaraujo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-03 02:43:27 "/>
+        <attribute name="created" value="anVhbi5nbWFyYXVqbztTQU4wNjc0Mzg1VzExLTE7MjAyNS0wOS0wMzsiMDI6Mjg6MjQgIjszMzk4"/>
+        <attribute name="edited" value="anVhbi5nbWFyYXVqbztTQU4wNjc0Mzg1VzExLTE7MjAyNS0wOS0wMzsiMDI6NDM6MjcgIjsxOzM1MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, repetir, operador" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero:&quot;" newline="True"/>
+            <input variable="numero"/>
+            <output expression="&quot;Digite 1 para fazer adi&#231;&#227;o ou digite 2 para subtra&#231;&#227;o:&quot;" newline="True"/>
+            <input variable="operador"/>
+            <if expression="operador == 1">
+                <then>
+                    <for variable="repetir" start="1" end="11" direction="inc" step="1">
+                        <output expression="numero&amp;&quot; + &quot;&amp;repetir&amp;&quot; = &quot;&amp;numero" newline="True"/>
+                        <assign variable="numero" expression="numero + 1"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="repetir" start="11" end="1" direction="dec" step="1">
+                        <output expression="numero&amp;&quot; + &quot;&amp;repetir&amp;&quot; = &quot;&amp;numero" newline="True"/>
+                        <assign variable="numero" expression="numero - 1"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
